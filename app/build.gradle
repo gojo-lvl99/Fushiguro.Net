@@ -1,0 +1,40 @@
+// Fushiguro.Net Android VPN app's Gradle file
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "com.fushiguro.net"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.material:material:1.4.0' // Material Design
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.5.21' // Kotlin Standard Library
+
+    // Xray core dependencies
+    implementation 'com.github.v2ray:v2ray-core:1.0.0'
+    implementation 'com.github.v2ray:android-vpn:1.0.0'
+
+    // Protocol Support
+    implementation 'com.protocol.vless:vless:1.0.0'
+    implementation 'com.protocol.vmess:vmess:1.0.0'
+    implementation 'com.protocol.trojan:trojan:1.0.0'
+    implementation 'com.protocol.ss:ss:1.0.0'
+    implementation 'com.protocol.ws:ws:1.0.0'
+    implementation 'com.protocol.httpupgrade:httpupgrade:1.0.0'
+    implementation 'com.protocol.xhttp:xhttp:1.0.0'
+    implementation 'com.protocol.grpc:grpc:1.0.0'
+    implementation 'com.protocol.h2:h2:1.0.0'
+    implementation 'com.protocol.tcp:tcp:1.0.0'
+}
